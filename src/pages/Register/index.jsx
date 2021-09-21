@@ -1,10 +1,13 @@
+import { Container, Box } from "@material-ui/core";
 import Form from "../../components/Form";
 
 const Register = () => {
   return (
-    <div>
-      <Form />
-    </div>
+    <Container>
+      <Box sx={{ bgcolor: "#8b0000", height: "100vh" }}>
+        <Form />
+      </Box>
+    </Container>
   );
 };
 

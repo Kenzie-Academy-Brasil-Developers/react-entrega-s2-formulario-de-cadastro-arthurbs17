@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { useHistory } from "react-router-dom";
+import "./index.css";
 
 const Form = () => {
   const schema = yup.object().shape({
@@ -43,7 +44,7 @@ const Form = () => {
   };
   return (
     <Grid container justifyContent="center">
-      <Paper item elevation={5}>
+      <Paper item elevation={5} className=".paper">
         <h3>Faça seu Registro:</h3>
         <form onSubmit={handleSubmit(handleForm)}>
           <div>
@@ -77,6 +78,7 @@ const Form = () => {
               size="small"
               color="primary"
               margin="dense"
+              type="password"
               {...register("password")}
               error={!!errors.password}
               helperText={errors.password?.message}
@@ -89,6 +91,7 @@ const Form = () => {
               size="small"
               color="primary"
               margin="dense"
+              type="password"
               {...register("confirmPassword")}
               error={!!errors.confirmPassword}
               helperText={errors.confirmPassword?.message}
